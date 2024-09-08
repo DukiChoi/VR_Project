@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\cbcc1\\Desktop\\VR example240323\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A47BE79B-3A59-7D03-C33A-ED7D11D2A591}|Assembly-CSharp.csproj|C:\\Users\\cbcc1\\Desktop\\VR example240323\\assets\\ardity\\scripts\\msglistener_spoon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A47BE79B-3A59-7D03-C33A-ED7D11D2A591}|Assembly-CSharp.csproj|solutionrelative:assets\\ardity\\scripts\\msglistener_spoon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A47BE79B-3A59-7D03-C33A-ED7D11D2A591}|Assembly-CSharp.csproj|c:\\users\\cbcc1\\desktop\\vr example240323\\assets\\myscripts\\csv\\csvmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A47BE79B-3A59-7D03-C33A-ED7D11D2A591}|Assembly-CSharp.csproj|solutionrelative:assets\\myscripts\\csv\\csvmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\cbcc1\\Desktop\\VR example240323\\Library\\PackageCache\\com.unity.render-pipelines.universal@16.0.5\\Shaders\\Unlit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal@16.0.5\\Shaders\\Unlit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A47BE79B-3A59-7D03-C33A-ED7D11D2A591}|Assembly-CSharp.csproj|C:\\Users\\cbcc1\\Desktop\\VR example240323\\assets\\ardity\\scripts\\msglistener_marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A47BE79B-3A59-7D03-C33A-ED7D11D2A591}|Assembly-CSharp.csproj|solutionrelative:assets\\ardity\\scripts\\msglistener_marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A47BE79B-3A59-7D03-C33A-ED7D11D2A591}|Assembly-CSharp.csproj|C:\\Users\\cbcc1\\Desktop\\VR example240323\\assets\\ardity\\scripts\\serialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A47BE79B-3A59-7D03-C33A-ED7D11D2A591}|Assembly-CSharp.csproj|solutionrelative:assets\\ardity\\scripts\\serialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Unlit.shader",
+              "DocumentMoniker": "C:\\Users\\cbcc1\\Desktop\\VR example240323\\Library\\PackageCache\\com.unity.render-pipelines.universal@16.0.5\\Shaders\\Unlit.shader",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@16.0.5\\Shaders\\Unlit.shader",
+              "ToolTip": "C:\\Users\\cbcc1\\Desktop\\VR example240323\\Library\\PackageCache\\com.unity.render-pipelines.universal@16.0.5\\Shaders\\Unlit.shader",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.universal@16.0.5\\Shaders\\Unlit.shader",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2024-03-28T07:35:23.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SerialController.cs",
+              "DocumentMoniker": "C:\\Users\\cbcc1\\Desktop\\VR example240323\\Assets\\Ardity\\Scripts\\SerialController.cs",
+              "RelativeDocumentMoniker": "Assets\\Ardity\\Scripts\\SerialController.cs",
+              "ToolTip": "C:\\Users\\cbcc1\\Desktop\\VR example240323\\Assets\\Ardity\\Scripts\\SerialController.cs",
+              "RelativeToolTip": "Assets\\Ardity\\Scripts\\SerialController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T05:50:15.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MsgListener_spoon.cs",
+              "DocumentMoniker": "C:\\Users\\cbcc1\\Desktop\\VR example240323\\Assets\\Ardity\\Scripts\\MsgListener_spoon.cs",
+              "RelativeDocumentMoniker": "Assets\\Ardity\\Scripts\\MsgListener_spoon.cs",
+              "ToolTip": "C:\\Users\\cbcc1\\Desktop\\VR example240323\\Assets\\Ardity\\Scripts\\MsgListener_spoon.cs",
+              "RelativeToolTip": "Assets\\Ardity\\Scripts\\MsgListener_spoon.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAwCYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T05:22:39.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MsgListener_marker.cs",
+              "DocumentMoniker": "C:\\Users\\cbcc1\\Desktop\\VR example240323\\Assets\\Ardity\\Scripts\\MsgListener_marker.cs",
+              "RelativeDocumentMoniker": "Assets\\Ardity\\Scripts\\MsgListener_marker.cs",
+              "ToolTip": "C:\\Users\\cbcc1\\Desktop\\VR example240323\\Assets\\Ardity\\Scripts\\MsgListener_marker.cs",
+              "RelativeToolTip": "Assets\\Ardity\\Scripts\\MsgListener_marker.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAwCAAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T05:19:38.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CSVManager.cs",
+              "DocumentMoniker": "C:\\Users\\cbcc1\\Desktop\\VR example240323\\Assets\\MyScripts\\CSV\\CSVManager.cs",
+              "RelativeDocumentMoniker": "Assets\\MyScripts\\CSV\\CSVManager.cs",
+              "ToolTip": "C:\\Users\\cbcc1\\Desktop\\VR example240323\\Assets\\MyScripts\\CSV\\CSVManager.cs",
+              "RelativeToolTip": "Assets\\MyScripts\\CSV\\CSVManager.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAgwHQAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T04:50:24.005Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

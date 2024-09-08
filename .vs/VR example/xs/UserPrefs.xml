@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{9587E91E-9561-E457-2A16-5A7D7F510557}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Positiontracking.cs">
+    <Files>
+      <File FileName="Assets/Positiontracking.cs" Line="19" Column="54" />
+      <File FileName="Assets/Ardity/Scripts/MsgListener.cs" Line="50" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="VR example" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Ardity" expanded="True">
+                <Node name="Scripts" expanded="True" />
+              </Node>
+              <Node name="Positiontracking.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3e621472-a8a1-46be-9e9a-6c1a46bf2962" />
+</Properties>

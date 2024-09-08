@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\cbcc1\\Desktop\\VR example240407\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C1BE4FEB-34D5-9F5A-D06C-19DEAC42D1AD}|Assembly-CSharp.csproj|c:\\users\\cbcc1\\desktop\\vr example240407\\assets\\myscripts\\csv\\csvmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1BE4FEB-34D5-9F5A-D06C-19DEAC42D1AD}|Assembly-CSharp.csproj|solutionrelative:assets\\myscripts\\csv\\csvmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1BE4FEB-34D5-9F5A-D06C-19DEAC42D1AD}|Assembly-CSharp.csproj|c:\\users\\cbcc1\\desktop\\vr example240407\\assets\\ardity\\scripts\\msglistener_marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1BE4FEB-34D5-9F5A-D06C-19DEAC42D1AD}|Assembly-CSharp.csproj|solutionrelative:assets\\ardity\\scripts\\msglistener_marker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1BE4FEB-34D5-9F5A-D06C-19DEAC42D1AD}|Assembly-CSharp.csproj|C:\\Users\\cbcc1\\Desktop\\VR example240407\\assets\\ardity\\scripts\\serialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1BE4FEB-34D5-9F5A-D06C-19DEAC42D1AD}|Assembly-CSharp.csproj|solutionrelative:assets\\ardity\\scripts\\serialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1BE4FEB-34D5-9F5A-D06C-19DEAC42D1AD}|Assembly-CSharp.csproj|C:\\Users\\cbcc1\\Desktop\\VR example240407\\assets\\ardity\\scripts\\threads\\abstractserialthread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1BE4FEB-34D5-9F5A-D06C-19DEAC42D1AD}|Assembly-CSharp.csproj|solutionrelative:assets\\ardity\\scripts\\threads\\abstractserialthread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CSVManager.cs",
+              "DocumentMoniker": "C:\\Users\\cbcc1\\Desktop\\VR example240407\\Assets\\MyScripts\\CSV\\CSVManager.cs",
+              "RelativeDocumentMoniker": "Assets\\MyScripts\\CSV\\CSVManager.cs",
+              "ToolTip": "C:\\Users\\cbcc1\\Desktop\\VR example240407\\Assets\\MyScripts\\CSV\\CSVManager.cs",
+              "RelativeToolTip": "Assets\\MyScripts\\CSV\\CSVManager.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAADwvzEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T09:04:17.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MsgListener_marker.cs",
+              "DocumentMoniker": "C:\\Users\\cbcc1\\Desktop\\VR example240407\\Assets\\Ardity\\Scripts\\MsgListener_marker.cs",
+              "RelativeDocumentMoniker": "Assets\\Ardity\\Scripts\\MsgListener_marker.cs",
+              "ToolTip": "C:\\Users\\cbcc1\\Desktop\\VR example240407\\Assets\\Ardity\\Scripts\\MsgListener_marker.cs",
+              "RelativeToolTip": "Assets\\Ardity\\Scripts\\MsgListener_marker.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAABIwC8AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T07:09:44.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SerialController.cs",
+              "DocumentMoniker": "C:\\Users\\cbcc1\\Desktop\\VR example240407\\Assets\\Ardity\\Scripts\\SerialController.cs",
+              "RelativeDocumentMoniker": "Assets\\Ardity\\Scripts\\SerialController.cs",
+              "ToolTip": "C:\\Users\\cbcc1\\Desktop\\VR example240407\\Assets\\Ardity\\Scripts\\SerialController.cs",
+              "RelativeToolTip": "Assets\\Ardity\\Scripts\\SerialController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAABIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T07:09:20.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AbstractSerialThread.cs",
+              "DocumentMoniker": "C:\\Users\\cbcc1\\Desktop\\VR example240407\\Assets\\Ardity\\Scripts\\Threads\\AbstractSerialThread.cs",
+              "RelativeDocumentMoniker": "Assets\\Ardity\\Scripts\\Threads\\AbstractSerialThread.cs",
+              "ToolTip": "C:\\Users\\cbcc1\\Desktop\\VR example240407\\Assets\\Ardity\\Scripts\\Threads\\AbstractSerialThread.cs",
+              "RelativeToolTip": "Assets\\Ardity\\Scripts\\Threads\\AbstractSerialThread.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T06:45:37.246Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
