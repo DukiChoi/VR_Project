@@ -9,8 +9,8 @@ Current diagnostic tools, such as the Unified Parkinson's Disease Rating Scale (
 ![Spooning](https://github.com/user-attachments/assets/069d922c-08e6-4958-b31a-45bf1e6ef64f)
 ![Drawing](https://github.com/user-attachments/assets/b0209c91-db1a-4afa-8281-6a8d4bedd9d6)
 ![Custom-designed Board](https://github.com/user-attachments/assets/2d9a14d4-bffe-410f-ab8f-fb90dc72cccf)
-![Spoooon](https://github.com/user-attachments/assets/19eb9eb6-73bf-45e5-a74d-767bcea9239f)
-![Spoooooon](https://github.com/user-attachments/assets/59110183-e135-4583-a659-4d6f1939a018)
+![Spoon](https://github.com/user-attachments/assets/c1b4d9aa-9c8f-45c1-8631-5044df10b772)
+![Spooon](https://github.com/user-attachments/assets/ed2d272f-3ab6-48ab-9f5c-c56f41bcef15)
 
 ## Videos
 
