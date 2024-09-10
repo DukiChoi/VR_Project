@@ -6,8 +6,14 @@ Current diagnostic tools, such as the Unified Parkinson's Disease Rating Scale (
 
 
 ## Pics
+
+###Tasks(Spooning And Drawing)
+
 ![Spooning](https://github.com/user-attachments/assets/069d922c-08e6-4958-b31a-45bf1e6ef64f)
 ![Drawing](https://github.com/user-attachments/assets/b0209c91-db1a-4afa-8281-6a8d4bedd9d6)
+
+###Custom-designed Boards
+
 ![Custom-designed Board](https://github.com/user-attachments/assets/2d9a14d4-bffe-410f-ab8f-fb90dc72cccf)
 ![Spoon](https://github.com/user-attachments/assets/c1b4d9aa-9c8f-45c1-8631-5044df10b772)
 ![Spooon](https://github.com/user-attachments/assets/ed2d272f-3ab6-48ab-9f5c-c56f41bcef15)
@@ -24,6 +30,8 @@ During two tasks, participants utilized the sensor-equipped devices to perform t
 While the participants performed the tasks, 3-axis acceleration and orientation data detected by the IMU sensors, along with the position of the tool in virtual reality, were recorded. The collected data was then used for statistical analysis based on Fitts' law. 
 Additionally, we are currently conducting research to analyze the data using AI-based analysis techniques(ex. CNN, RNN), beyond simple statistical analysis.
 
+###Analysis
+
 ![Graph1](https://github.com/user-attachments/assets/6136bcea-f0a0-4e9c-add3-a1bc84aa65eb)
 ![Graph2](https://github.com/user-attachments/assets/9125ad2f-10c6-4a30-adc2-c05c4b912036)
 
@@ -32,9 +40,6 @@ Additionally, we are currently conducting research to analyze the data using AI-
 ## License Information
 
 This project is licensed for **personal use only**. Any academic or commercial use is strictly prohibited without the explicit permission of the author.
-
 For more details, please refer to the [LICENSE](./LICENSE) file.
-
 If you wish to use this software for academic or commercial purposes, please contact the author at [cbcc12345@hanyang.ac.kr] or [cbcc1234@gmail.com].
-
 Unauthorized use may result in legal action.
