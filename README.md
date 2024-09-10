@@ -1,5 +1,4 @@
-# Virtual Reality System for the Precise Measurement
-and Evaluation of Movement Disorders
+# Virtual Reality System for the Precise Measurement and Evaluation of Movement Disorders
 
 ## Overview
 This project explores the use of Virtual Reality (VR) platforms combined with IMU sensors to diagnose movement disorders, specifically focusing on conditions such as Parkinson's disease and essential tremor. 
