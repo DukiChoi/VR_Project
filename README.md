@@ -5,7 +5,7 @@ This project explores the use of Virtual Reality (VR) platforms combined with IM
 Current diagnostic tools, such as the Unified Parkinson's Disease Rating Scale (UPDRS) and the TETRAS scale for essential tremor, rely on subjective assessments, often leading to potential biases in diagnosis.
 
 
-## Pics
+## Pictures
 
 ### Tasks(Spooning And Drawing)
 
