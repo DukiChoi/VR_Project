@@ -28,10 +28,11 @@ https://github.com/user-attachments/assets/743ca44c-4326-4589-9b2b-2f57e76d7bc5
 ## 4. Breif Explanation
 
  ![그림2](https://github.com/user-attachments/assets/b3b7e8fe-f19a-4fbe-ac0e-a6439e69ce64)
-In the VR environment implemented with a Head Mounted Display (HMD), participants used devices equipped with IMU sensors and the nRF52840 microcontroller to simulate daily activities.
-During two tasks, participants utilized the sensor-equipped devices to perform two tasks within the virtual reality: (1) transferring food from one bowl to another and (2) drawing a spiral pattern on a blackboard.
-While the participants performed the tasks, 3-axis acceleration and orientation data detected by the IMU sensors, along with the position of the tool in virtual reality, were recorded. The collected data was then used for statistical analysis based on Fitts' law. 
-Additionally, we are currently conducting research to analyze the data using AI-based analysis techniques(ex. CNN, RNN), beyond simple statistical analysis.
+In the VR environment implemented with a Head Mounted Display (HMD), participants used devices equipped with IMU sensors and the nRF52840 microcontroller to simulate daily activities. Each of the two tasks was divided into five levels of difficulty. For the first task, transferring food from one bowl to another, the difficulty was increased by extending the distance between the bowls. In the second task, drawing a spiral pattern on a blackboard, the difficulty was adjusted by increasing the size of the spiral.
+
+While the participants performed these tasks, 3-axis acceleration and orientation data detected by the IMU sensors, along with the position of the tool in virtual reality, were recorded. The collected data was then used for statistical analysis based on Fitts' law, with the difficulty level for each task considered in the analysis.
+
+Additionally, we are currently conducting research to analyze the data using AI-based analysis techniques (e.g., CNN, RNN), beyond simple statistical analysis.
 
 ### 5. Analysis Example
 
