@@ -4,3 +4,27 @@
 This project explores the use of Virtual Reality (VR) platforms combined with IMU sensors to diagnose movement disorders, specifically focusing on conditions such as Parkinson's disease and essential tremor. 
 Current diagnostic tools, such as the Unified Parkinson's Disease Rating Scale (UPDRS) and the TETRAS scale for essential tremor, rely on subjective assessments, often leading to potential biases in diagnosis.
 
+
+## Pics
+![Spooning](https://github.com/user-attachments/assets/069d922c-08e6-4958-b31a-45bf1e6ef64f)
+![Drawing](https://github.com/user-attachments/assets/b0209c91-db1a-4afa-8281-6a8d4bedd9d6)
+![Custom-designed Board](https://github.com/user-attachments/assets/2d9a14d4-bffe-410f-ab8f-fb90dc72cccf)
+![Spoooon](https://github.com/user-attachments/assets/19eb9eb6-73bf-45e5-a74d-767bcea9239f)
+![Spoooooon](https://github.com/user-attachments/assets/59110183-e135-4583-a659-4d6f1939a018)
+
+## Videos
+
+https://github.com/user-attachments/assets/d83c568d-5c40-49ca-bca4-efd353bf4da3
+https://github.com/user-attachments/assets/743ca44c-4326-4589-9b2b-2f57e76d7bc5
+
+## Breif Explanation
+
+In the VR environment implemented with a Head Mounted Display (HMD), participants used devices equipped with IMU sensors and the nRF52840 microcontroller to simulate daily activities.
+During two tasks, participants utilized the sensor-equipped devices to perform two tasks within the virtual reality: (1) transferring food from one bowl to another and (2) drawing a spiral pattern on a blackboard.
+While the participants performed the tasks, 3-axis acceleration and orientation data detected by the IMU sensors, along with the position of the tool in virtual reality, were recorded. The collected data was then used for statistical analysis based on Fitts' law. 
+Additionally, we are currently conducting research to analyze the data using AI-based analysis techniques(ex. CNN, RNN), beyond simple statistical analysis.
+![image](https://github.com/user-attachments/assets/6136bcea-f0a0-4e9c-add3-a1bc84aa65eb)
+![image](https://github.com/user-attachments/assets/9125ad2f-10c6-4a30-adc2-c05c4b912036)
+
+
+
