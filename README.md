@@ -23,8 +23,8 @@ In the VR environment implemented with a Head Mounted Display (HMD), participant
 During two tasks, participants utilized the sensor-equipped devices to perform two tasks within the virtual reality: (1) transferring food from one bowl to another and (2) drawing a spiral pattern on a blackboard.
 While the participants performed the tasks, 3-axis acceleration and orientation data detected by the IMU sensors, along with the position of the tool in virtual reality, were recorded. The collected data was then used for statistical analysis based on Fitts' law. 
 Additionally, we are currently conducting research to analyze the data using AI-based analysis techniques(ex. CNN, RNN), beyond simple statistical analysis.
-![image](https://github.com/user-attachments/assets/6136bcea-f0a0-4e9c-add3-a1bc84aa65eb)
-![image](https://github.com/user-attachments/assets/9125ad2f-10c6-4a30-adc2-c05c4b912036)
+![Graph1](https://github.com/user-attachments/assets/6136bcea-f0a0-4e9c-add3-a1bc84aa65eb)
+![Graph2](https://github.com/user-attachments/assets/9125ad2f-10c6-4a30-adc2-c05c4b912036)
 
 
 
