@@ -27,6 +27,8 @@ https://github.com/user-attachments/assets/743ca44c-4326-4589-9b2b-2f57e76d7bc5
 
 ## Breif Explanation
 
+
+![game1_distance](https://github.com/user-attachments/assets/5127384d-c695-4f01-a250-0ba65898f77b)
 In the VR environment implemented with a Head Mounted Display (HMD), participants used devices equipped with IMU sensors and the nRF52840 microcontroller to simulate daily activities.
 During two tasks, participants utilized the sensor-equipped devices to perform two tasks within the virtual reality: (1) transferring food from one bowl to another and (2) drawing a spiral pattern on a blackboard.
 While the participants performed the tasks, 3-axis acceleration and orientation data detected by the IMU sensors, along with the position of the tool in virtual reality, were recorded. The collected data was then used for statistical analysis based on Fitts' law. 
