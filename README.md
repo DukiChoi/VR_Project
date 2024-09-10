@@ -28,3 +28,12 @@ Additionally, we are currently conducting research to analyze the data using AI-
 
 
 
+## License Information
+
+This project is licensed for **personal use only**. Any academic or commercial use is strictly prohibited without the explicit permission of the author.
+
+For more details, please refer to the [LICENSE](./LICENSE) file.
+
+If you wish to use this software for academic or commercial purposes, please contact the author at [Your Email].
+
+Unauthorized use may result in legal action.
