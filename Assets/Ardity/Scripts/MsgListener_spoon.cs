@@ -32,17 +32,17 @@ public class MsgListener_spoon : MonoBehaviour
         //Debug.Log(msg);
         string[] vec3 = msg.Split(','); //My arduino script returns a 3 part value (IE: 12,30,18)
 
-        if (vec3[0] != "" && vec3[1] != "" && vec3[2] != "" && vec3[3] != "") //Check if all values are recieved
+        if (vec3[0] == "1" && vec3[1] != "" && vec3[2] != "" && vec3[3] != "" && vec3[4] != "") //Check if all values are recieved
         {
 
-            ori_x = float.Parse(vec3[2]); //VR상에서의 roll
+            ori_x = float.Parse(vec3[3]); //VR상에서의 roll
             //동서남북 방향에 따라서 값 달라짐
-            ori_y = float.Parse(vec3[0]) + SettingController.direction;
-            ori_z = float.Parse(vec3[1]); //VR상에서의 pitch
-            button = int.Parse(vec3[3]);
-            acc_x = float.Parse(vec3[4]);
-            acc_y = float.Parse(vec3[5]);
-            acc_z = float.Parse(vec3[6]);
+            ori_y = float.Parse(vec3[1]) + SettingController.direction;
+            ori_z = float.Parse(vec3[2]); //VR상에서의 pitch
+            button = int.Parse(vec3[4]);
+            acc_x = float.Parse(vec3[5]);
+            acc_y = float.Parse(vec3[6]);
+            acc_z = float.Parse(vec3[7]);
 
             //yaw >> roll
             //pitch >> yaw

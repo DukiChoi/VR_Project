@@ -8226,9 +8226,6 @@ PrefabInstance:
       addedObject: {fileID: 837774284}
     - targetCorrespondingSourceObject: {fileID: 128384, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 837774286}
-    - targetCorrespondingSourceObject: {fileID: 128384, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 837774288}
   m_SourcePrefab: {fileID: 100100000, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
 --- !u!1 &396513079
@@ -13182,7 +13179,7 @@ GameObject:
   m_Layer: 0
   m_Name: Table Spoon
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -13247,7 +13244,7 @@ Transform:
   m_GameObject: {fileID: 577927674}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0.10199976, y: 0, z: 0}
+  m_LocalPosition: {x: 0.122, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18983,28 +18980,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc5f48af2cffd747a079fe8c632e2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portName: COM19
+  portName: COM3
   baudRate: 115200
+  messageListener1: {fileID: 1300859769}
+  messageListener2: {fileID: 524229490}
+  reconnectionDelay: 1000
+  maxUnreadMessages: 1
   messageListener: {fileID: 1300859769}
-  reconnectionDelay: 1000
-  maxUnreadMessages: 1
---- !u!114 &837774286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837774280}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bc5f48af2cffd747a079fe8c632e2c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  portName: COM7
-  baudRate: 115200
-  messageListener: {fileID: 524229490}
-  reconnectionDelay: 1000
-  maxUnreadMessages: 1
 --- !u!114 &837774288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27363,7 +27345,7 @@ GameObject:
   m_Layer: 0
   m_Name: Table Spoon Object
   m_TagString: Spoon
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

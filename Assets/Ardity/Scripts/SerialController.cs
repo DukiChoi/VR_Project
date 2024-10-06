@@ -35,7 +35,8 @@ public class SerialController : MonoBehaviour
 
     [Tooltip("Reference to an scene object that will receive the events of connection, " +
              "disconnection and the messages from the serial device.")]
-    public GameObject messageListener;
+    public GameObject messageListener1;
+    public GameObject messageListener2;
 
     [Tooltip("After an error in the serial communication, or an unsuccessful " +
              "connect, how many milliseconds we should wait.")]
@@ -60,8 +61,15 @@ public class SerialController : MonoBehaviour
     protected SerialThreadLines serialThread;
 
 
-
-
+    string message = "";
+    string[] str;
+    public GameObject messageListener;
+/*    enum device_type : int {
+        NONE = 0,
+        Spoon = 1,
+        Marker = 2
+    }
+*/
     // ------------------------------------------------------------------------
     // Invoked whenever the SerialController gameobject is activated.
     // It creates a new thread that tries to connect to the serial device
@@ -116,17 +124,41 @@ public class SerialController : MonoBehaviour
     {
         // If the user prefers to poll the messages instead of receiving them
         // via SendMessage, then the message listener should be null.
-        if (messageListener == null)
+        if (messageListener1 == null)
         {
-            Debug.Log("No messageListener");
+            Debug.Log("No messageListener1");
             return;
         }
+        if (messageListener2 == null)
+        {
+            Debug.Log("No messageListener2");
+            return;
+        }
+
         //Debug.Log("There is a messageLister");
         // Read the next message from the queue
-        string message = (string)serialThread.ReadMessage();
-        //Debug.Log("msg is: " +  message);
+        message = (string)serialThread.ReadMessage();
+
         if (message == null)
             return;
+
+        //메시지가 존재할 경우 맨 앞 값으로 스푼인지 마커인지 판명하기.
+        else
+        {
+            string[] str = message.Split(',');
+            if (str[0] == "1")
+            {
+                //스푼
+                messageListener = messageListener1;
+            }
+            else if (str[0] == "2")
+            {
+                //마커
+                messageListener = messageListener2;
+            }
+        }
+        //Debug.Log("msg is: " +  message);
+
         // Check if the message is plain data or a connect/disconnect event.
         if (ReferenceEquals(message, SERIAL_DEVICE_CONNECTED))
         {
