@@ -36,3 +36,7 @@
 
 # Gradle cache
 .gradle/
+
+#CSVs
+*.csv
+*.csv.meta
