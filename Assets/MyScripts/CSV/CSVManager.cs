@@ -37,6 +37,7 @@ public class CSVManager : MonoBehaviour
     private int game2_count;
     [Header("<Reference>")]
     //각각 Draw Camera와 MarkerTip 그리고 CameraCheckingText 넣는다.
+   
     public new Camera camera;
     public GameObject markertip;
     public TextMeshPro CameraText;
@@ -53,7 +54,7 @@ public class CSVManager : MonoBehaviour
         F2 = 2,
         F3 = 3
     }
-    CURRENT_KEY currentkey = CURRENT_KEY.None;
+    public CURRENT_KEY currentkey = CURRENT_KEY.None;
 
     void Awake()
     {

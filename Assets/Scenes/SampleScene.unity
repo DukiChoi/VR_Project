@@ -34724,6 +34724,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1667230012}
+  - component: {fileID: 1667230013}
   m_Layer: 0
   m_Name: DRAWING
   m_TagString: Untagged
@@ -34751,6 +34752,21 @@ Transform:
   - {fileID: 101558724}
   m_Father: {fileID: 1568580552}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1667230013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667230011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ceabc26f0ba60448ebda9496ce9226, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  levelText2: {fileID: 0}
+  m_OrthographicCamera: {fileID: 0}
 --- !u!1 &1669796228 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3452694226032689571, guid: 7d297ce6a487c0247b5edccce4ece3c6, type: 3}
@@ -35393,7 +35409,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -0.98362875, w: 0}
+  m_margin: {x: 0, y: -0.8884247, z: -0.98362875, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -36855,6 +36871,7 @@ MonoBehaviour:
   game2Text: {fileID: 1702339625}
   game1ScoreText: {fileID: 390789932}
   renderTexture1: {fileID: 8400000, guid: 42ed5cd82002cde4b973c93f9a99ed66, type: 2}
+  currentkey: 0
 --- !u!1 &1772742012 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3452694226032689571, guid: 7d297ce6a487c0247b5edccce4ece3c6, type: 3}
