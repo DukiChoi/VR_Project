@@ -18,7 +18,6 @@ public class MovingDishes : MonoBehaviour
 
     public enum CURRENT_KEY
     {
-        None = 0,
         n1 = 1,
         n2 = 2,
         n3 = 3,
@@ -26,7 +25,7 @@ public class MovingDishes : MonoBehaviour
         n5 = 5
     }
 
-    CURRENT_KEY currentkey = CURRENT_KEY.None;
+    CURRENT_KEY currentkey = CURRENT_KEY.n1;
 
     // Start is called before the first frame update
     void Start()

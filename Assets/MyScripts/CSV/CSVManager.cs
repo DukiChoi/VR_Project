@@ -13,6 +13,7 @@ using TMPro;
 using Unity.VisualScripting;
 using Meta.WitAi.Events;
 using System.Diagnostics;
+using static TreeEditor.TextureAtlas;
 
 public class CSVManager : MonoBehaviour
 {
@@ -47,6 +48,9 @@ public class CSVManager : MonoBehaviour
     public RenderTexture renderTexture1;
     private Stopwatch watch;
     private int drawing_check = 0;
+    private String figure_name = "";
+    ChangingCanvas.CURRENT_KEY2 key2;
+    private GameObject CanvasObj;
     public enum CURRENT_KEY
     {
         None = 0,
@@ -62,6 +66,7 @@ public class CSVManager : MonoBehaviour
 
         spoon = GameObject.Find("Table Spoon Object");
         marker = GameObject.Find("Marker Red Object");
+        CanvasObj = GameObject.Find("Draw Canvas");
         //spoon = GameObject.FindGameObjectWithTag("Spoon");
         //marker = GameObject.FindGameObjectWithTag("Marker");
         
@@ -111,7 +116,7 @@ public class CSVManager : MonoBehaviour
     {
 
         //F1:: 첫번째 게임 시작
-        if (Input.GetKeyDown(KeyCode.F1) && currentkey != CURRENT_KEY.F1)
+        if (Input.GetKeyDown(KeyCode.F1) && currentkey != CURRENT_KEY.F1 && currentkey != CURRENT_KEY.F2)
         {
             if (!IsInit)
             {
@@ -174,7 +179,7 @@ public class CSVManager : MonoBehaviour
 
         }
         //F2:: 두번째 게임 시작
-        else if (Input.GetKeyDown(KeyCode.F2) && currentkey != CURRENT_KEY.F2)
+        else if (Input.GetKeyDown(KeyCode.F2) && currentkey != CURRENT_KEY.F2 && currentkey != CURRENT_KEY.F1)
         {
             if (!IsInit)
             {
@@ -211,7 +216,7 @@ public class CSVManager : MonoBehaviour
 
             gameObj = marker;
             currentkey = CURRENT_KEY.F2;
-            fileName = init_time + "_drawing" + game2_count.ToString();
+            fileName = init_time + "_drawing" + game2_count.ToString() + "_level" + ChangingCanvas.whichlevel2;
             game2_count++;
             outStream = System.IO.File.CreateText(filepath + fileName + ".csv");
             sb = new StringBuilder();
@@ -224,6 +229,35 @@ public class CSVManager : MonoBehaviour
             game2Text.color = new Color32(0xFF, 0x5C, 0x25, 0xFF);
             //점수표 색깔 원래대로(보라) 바꾸기
             game1ScoreText.color = new Color32(0x67, 0x00, 0xFF, 0xFF);
+            //그림 바꾸기
+            key2 =  CanvasObj.GetComponent<ChangingCanvas>().currentkey;
+            UnityEngine.Debug.Log("찾았습니다.");
+            if (key2 == ChangingCanvas.CURRENT_KEY2.n8)
+            {
+                figure_name = "Figure1";
+            }
+            else if (key2 == ChangingCanvas.CURRENT_KEY2.n9)
+            {
+                figure_name = "Figure2";
+            }
+            else if(key2 == ChangingCanvas.CURRENT_KEY2.n0)
+            {
+                figure_name = "Figure3";
+            }
+            else if(key2 == ChangingCanvas.CURRENT_KEY2.None)
+            {
+                UnityEngine.Debug.Log("Level is not Set");
+                return;
+            }
+            
+            if (key2 != ChangingCanvas.CURRENT_KEY2.None)
+            {
+                Texture tex = Resources.Load(figure_name, typeof(Texture)) as Texture;
+                Renderer renderer = CanvasObj.GetComponent<Renderer>();
+                renderer.material.SetTexture("_Image", tex);
+                UnityEngine.Debug.Log(figure_name + "으로 바꿉니다.");
+            }
+
 
             //데이터 쓰기
             string[][] output = new string[data.Count][];

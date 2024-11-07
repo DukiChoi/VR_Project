@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,11 +13,11 @@ public class ChangingCanvas : MonoBehaviour
     public enum CURRENT_KEY2
     {
         None = 0,
-        n8 = 8,
-        n9 = 9,
-        n0 = 10
+        n8 = 1,
+        n9 = 2,
+        n0 = 3
     }
-    CURRENT_KEY2 currentkey = CURRENT_KEY2.None;
+    public CURRENT_KEY2 currentkey = CURRENT_KEY2.None;
 
     //public void SetMaterial(Material newMaterial)
     //{
@@ -28,7 +29,7 @@ public class ChangingCanvas : MonoBehaviour
     //}
 
     // Start is called before the first frame update
-    public static int whichlevel2;
+    public static int whichlevel2 = 0;
     public TextMeshPro levelText2;
     void Start()
     {
@@ -46,21 +47,25 @@ public class ChangingCanvas : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha8) && currentkey != CURRENT_KEY2.n8)
         {
-            SetTexture("Figure1");
+            whichlevel2 = 1;
+            SetTexture("Figure01");
             currentkey = CURRENT_KEY2.n8;
-            levelText2.text = "<Spiral Quest>\r\n        Level 1";
+            levelText2.text = "<Spiral Quest>\r\n      Level 1";
         }
         else if (Input.GetKeyDown(KeyCode.Alpha9) && currentkey != CURRENT_KEY2.n9)
         {
-            SetTexture("Figure2");
+            whichlevel2 = 2;
+            SetTexture("Figure02");
             currentkey = CURRENT_KEY2.n9;
-            levelText2.text = "<Spiral Quest>\r\n        Level 2";
+            levelText2.text = "<Spiral Quest>\r\n      Level 2";
         }
         else if (Input.GetKeyDown(KeyCode.Alpha0) && currentkey != CURRENT_KEY2.n0)
         {
-            SetTexture("Figure3");
+            whichlevel2 = 3;
+            SetTexture("Figure03");
             currentkey = CURRENT_KEY2.n0;
-            levelText2.text = "<Spiral Quest>\r\n        Level 3";
+            levelText2.text = "<Spiral Quest>\r\n      Level 3";
         }
+        whichlevel2 = Convert.ToInt32(currentkey);
     }
 }
