@@ -206,6 +206,7 @@ public class CSVManager : MonoBehaviour
             tempData[11] = "Tip_loc_x";
             tempData[12] = "Tip_loc_y";
             tempData[13] = "Tip_loc_z";
+            tempData[14] = "Drawing_check";
             data.Add(tempData);
 
             gameObj = marker;
