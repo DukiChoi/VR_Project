@@ -14,6 +14,7 @@ using Unity.VisualScripting;
 using Meta.WitAi.Events;
 using System.Diagnostics;
 using static TreeEditor.TextureAtlas;
+using UnityEngine.Experimental.Rendering;
 
 public class CSVManager : MonoBehaviour
 {
@@ -45,12 +46,13 @@ public class CSVManager : MonoBehaviour
     public TextMeshPro game1Text;
     public TextMeshPro game2Text;
     public TextMeshPro game1ScoreText;
-    public RenderTexture renderTexture1;
     private Stopwatch watch;
     private int drawing_check = 0;
     private String figure_name = "";
     ChangingCanvas.CURRENT_KEY2 key2;
     private GameObject CanvasObj;
+    private RenderTexture renderTexture_canvas; // 저장할 RenderTexture를 Unity 에디터에서 설정
+    TextureCreationFlags flags;
     public enum CURRENT_KEY
     {
         None = 0,
@@ -58,7 +60,7 @@ public class CSVManager : MonoBehaviour
         F2 = 2,
         F3 = 3
     }
-    public CURRENT_KEY currentkey = CURRENT_KEY.None;
+    private CURRENT_KEY currentkey = CURRENT_KEY.None;
 
     void Awake()
     {
@@ -88,7 +90,7 @@ public class CSVManager : MonoBehaviour
         //data.Add(tempData);
 
         //파일경로 지정
-        filepath = SystemPath.GetPath();
+        filepath = SystemPath.GetPath() + "/experiment/";
 
         if (!Directory.Exists(filepath))
         {
@@ -149,9 +151,8 @@ public class CSVManager : MonoBehaviour
             tempData[12] = "Out";
             tempData[13] = "Trials";
             tempData[14] = "Remains";
-
-
             data.Add(tempData);
+
             gameObj = spoon;
             currentkey = CURRENT_KEY.F1;
             fileName = init_time + "_spoon" + game1_count.ToString() + "_level" + MovingDishes.whichlevel;
@@ -188,6 +189,26 @@ public class CSVManager : MonoBehaviour
                 watch.Stop();
                 UnityEngine.Debug.Log("The game ends");
                 UnityEngine.Debug.Log("CSV Saved completely on: " + filepath + fileName + ".csv");
+            }
+
+            //레벨별로 그림 바꾸기
+            key2 = CanvasObj.GetComponent<ChangingCanvas>().currentkey;
+            if (key2 == ChangingCanvas.CURRENT_KEY2.n8)
+            {
+                figure_name = "Figure1";
+            }
+            else if (key2 == ChangingCanvas.CURRENT_KEY2.n9)
+            {
+                figure_name = "Figure2";
+            }
+            else if (key2 == ChangingCanvas.CURRENT_KEY2.n0)
+            {
+                figure_name = "Figure3";
+            }
+            else if (key2 == ChangingCanvas.CURRENT_KEY2.None)
+            {
+                UnityEngine.Debug.Log("레벨을 정해주세요");
+                return;
             }
 
             watch = new Stopwatch();
@@ -229,26 +250,7 @@ public class CSVManager : MonoBehaviour
             game2Text.color = new Color32(0xFF, 0x5C, 0x25, 0xFF);
             //점수표 색깔 원래대로(보라) 바꾸기
             game1ScoreText.color = new Color32(0x67, 0x00, 0xFF, 0xFF);
-            //그림 바꾸기
-            key2 =  CanvasObj.GetComponent<ChangingCanvas>().currentkey;
-            UnityEngine.Debug.Log("찾았습니다.");
-            if (key2 == ChangingCanvas.CURRENT_KEY2.n8)
-            {
-                figure_name = "Figure1";
-            }
-            else if (key2 == ChangingCanvas.CURRENT_KEY2.n9)
-            {
-                figure_name = "Figure2";
-            }
-            else if(key2 == ChangingCanvas.CURRENT_KEY2.n0)
-            {
-                figure_name = "Figure3";
-            }
-            else if(key2 == ChangingCanvas.CURRENT_KEY2.None)
-            {
-                UnityEngine.Debug.Log("Level is not Set");
-                return;
-            }
+
             
             if (key2 != ChangingCanvas.CURRENT_KEY2.None)
             {
@@ -274,7 +276,7 @@ public class CSVManager : MonoBehaviour
         //F3:: 게임 끝내기
         else if (Input.GetKeyDown(KeyCode.F3))
         {
-            ClearOutRenderTexture(renderTexture1);
+            ClearOutRenderTexture(renderTexture_canvas);
             if (currentkey != CURRENT_KEY.F3)
             {
                 if (!IsInit)
@@ -289,6 +291,12 @@ public class CSVManager : MonoBehaviour
                     game2Text.color = new Color32(0xD4, 0xFF, 0x00, 0xFF);
                     //점수표 색깔 원래대로(보라) 바꾸기
                     game1ScoreText.color = new Color32(0x67, 0x00, 0xFF, 0xFF);
+
+                    //두번째 겜에서만 사진 png로 저장하기!!!!
+                    if (currentkey == CURRENT_KEY.F2)
+                    {
+                        SaveRenderTextureToFile();
+                    }
                 }
                 IsInit = true;
                 currentkey = CURRENT_KEY.F3;
@@ -402,4 +410,58 @@ public class CSVManager : MonoBehaviour
         RenderTexture.active = rt;
     }
 
+    private void SaveRenderTextureToFile()
+    {
+        //if (renderTexture_canvas == null)
+        //{
+        //    UnityEngine.Debug.LogWarning("RenderTexture가 지정되지 않았습니다.");
+        //    return;
+        //}
+
+        //R8G8B8A8_UNorm
+        //var texture = new Texture2D(128, 128, GraphicsFormat.R8G8B8A8_SRGB, flags);
+        //texture = CanvasObj.GetComponent<Renderer>().material.mainTexture as Texture2D;
+        //camera.Render();
+        renderTexture_canvas = camera.targetTexture;
+        RenderTexture.active = renderTexture_canvas;
+        Texture2D tex = new Texture2D(renderTexture_canvas.width, renderTexture_canvas.height, TextureFormat.RGB24, false);
+        tex.ReadPixels(new Rect(0, 0, renderTexture_canvas.width, renderTexture_canvas.height), 0, 0);
+        UnityEngine.Debug.Log("Width: " + renderTexture_canvas.width + ", Height: " + renderTexture_canvas.height);
+        tex.Apply();
+        RenderTexture.active = null;
+        tex = RotateTexture180(tex);
+        byte[] bytes = tex.EncodeToPNG();
+        //string path = Application.dataPath + "/Resources/" + fileName + ".png";
+        string image_path = filepath + fileName + ".png";
+        System.IO.File.WriteAllBytes(image_path, bytes);
+
+        UnityEngine.Debug.Log("Saved RenderTexture to " + image_path);
+    }
+
+
+    // 180도 회전 메서드
+    private Texture2D RotateTexture180(Texture2D originalTex)
+    {
+        int width = originalTex.width;
+        int height = originalTex.height;
+        Texture2D rotatedTex = new Texture2D(width, height);
+
+        Color[] originalPixels = originalTex.GetPixels();
+        Color[] rotatedPixels = new Color[originalPixels.Length];
+
+        // 픽셀 데이터를 뒤집어서 회전
+        for (int y = 0; y < height; y++)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                rotatedPixels[(height - y - 1) * width + (width - x - 1)] = originalPixels[y * width + x];
+            }
+        }
+
+        rotatedTex.SetPixels(rotatedPixels);
+        rotatedTex.Apply();
+
+        return rotatedTex;
+    }
 }
+

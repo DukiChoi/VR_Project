@@ -11288,7 +11288,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.571, y: 1.97}
+  m_AnchoredPosition: {x: 2.4, y: 1.97}
   m_SizeDelta: {x: 4, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &502531312
@@ -11588,7 +11588,7 @@ Transform:
   m_GameObject: {fileID: 524229490}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.36, y: 0.716, z: -1.13}
+  m_LocalPosition: {x: -0.349, y: 0.716, z: -0.749}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36869,8 +36869,6 @@ MonoBehaviour:
   game1Text: {fileID: 244068551}
   game2Text: {fileID: 1702339625}
   game1ScoreText: {fileID: 390789932}
-  renderTexture1: {fileID: 8400000, guid: 42ed5cd82002cde4b973c93f9a99ed66, type: 2}
-  currentkey: 0
 --- !u!1 &1772742012 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3452694226032689571, guid: 7d297ce6a487c0247b5edccce4ece3c6, type: 3}
