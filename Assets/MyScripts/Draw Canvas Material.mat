@@ -38,7 +38,7 @@ Material:
   m_Parent: {fileID: -876546973899608171, guid: 0f9c0943bda08e44f9138fe05edc7e5e, type: 3}
   m_ModifiedSerializedProperties: 16
   m_ValidKeywords:
-  - _ALPHAPREMULTIPLY_ON
+  - _SIX_WAY_COLOR_ABSORPTION
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -48,7 +48,6 @@ Material:
   stringTagMap:
     RenderType: Transparent
   disabledShaderPasses:
-  - MOTIONVECTORS
   - DepthOnly
   m_LockedProperties: 
   m_SavedProperties:
@@ -72,7 +71,7 @@ Material:
     - _Blend: 0
     - _DstBlend: 10
     - _QueueControl: 0
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _Surface: 1
     - _ZWrite: 0
     m_Colors:

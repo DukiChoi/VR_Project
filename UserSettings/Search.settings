@@ -8,7 +8,7 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.5A656512" = "ref=\"Assets/MyScripts/FPS_Setting.cs\""
+	"last_search.5A656512" = "ref=\"Assets/MyScripts/Figure.png\""
 	"OpenInspectorPreview.5A656512" = "0"
 	"currentGroup.5A656512" = null
 	"picker_window_position_offset.0B486DF2" = "96;31;320;550"
