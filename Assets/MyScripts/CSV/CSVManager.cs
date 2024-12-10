@@ -14,7 +14,6 @@ using Unity.VisualScripting;
 using Meta.WitAi.Events;
 using System.Diagnostics;
 using static TreeEditor.TextureAtlas;
-using UnityEngine.Experimental.Rendering;
 
 public class CSVManager : MonoBehaviour
 {
@@ -39,20 +38,21 @@ public class CSVManager : MonoBehaviour
     private int game2_count;
     [Header("<Reference>")]
     //각각 Draw Camera와 MarkerTip 그리고 CameraCheckingText 넣는다.
-   
+
     public new Camera camera;
     public GameObject markertip;
     public TextMeshPro CameraText;
     public TextMeshPro game1Text;
     public TextMeshPro game2Text;
     public TextMeshPro game1ScoreText;
+    public RenderTexture renderTexture1;
     private Stopwatch watch;
     private int drawing_check = 0;
     private String figure_name = "";
     ChangingCanvas.CURRENT_KEY2 key2;
     private GameObject CanvasObj;
     private RenderTexture renderTexture_canvas; // 저장할 RenderTexture를 Unity 에디터에서 설정
-    TextureCreationFlags flags;
+    //TextureCreationFlags flags;
     public enum CURRENT_KEY
     {
         None = 0,
@@ -60,7 +60,7 @@ public class CSVManager : MonoBehaviour
         F2 = 2,
         F3 = 3
     }
-    private CURRENT_KEY currentkey = CURRENT_KEY.None;
+    public CURRENT_KEY currentkey = CURRENT_KEY.None;
 
     void Awake()
     {
@@ -71,7 +71,7 @@ public class CSVManager : MonoBehaviour
         CanvasObj = GameObject.Find("Draw Canvas");
         //spoon = GameObject.FindGameObjectWithTag("Spoon");
         //marker = GameObject.FindGameObjectWithTag("Marker");
-        
+
         ////데이터 변수 초기화
         //data.Clear();
         ////데이터 가져오는 과정
@@ -120,14 +120,14 @@ public class CSVManager : MonoBehaviour
         //F1:: 첫번째 게임 시작
         if (Input.GetKeyDown(KeyCode.F1) && currentkey != CURRENT_KEY.F1 && currentkey != CURRENT_KEY.F2)
         {
-            //if (!IsInit)
-            //{
-            //    outStream.Write(sb);
-            //    outStream.Close();
-            //    watch.Stop();
-            //    UnityEngine.Debug.Log("The game ends");
-            //    UnityEngine.Debug.Log("CSV Saved completely on: " + filepath + fileName + ".csv");
-            //}
+            if (!IsInit)
+            {
+                outStream.Write(sb);
+                outStream.Close();
+                watch.Stop();
+                UnityEngine.Debug.Log("The game ends");
+                UnityEngine.Debug.Log("CSV Saved completely on: " + filepath + fileName + ".csv");
+            }
 
             watch = new Stopwatch();
             watch.Start();
@@ -151,8 +151,9 @@ public class CSVManager : MonoBehaviour
             tempData[12] = "Out";
             tempData[13] = "Trials";
             tempData[14] = "Remains";
-            data.Add(tempData);
 
+
+            data.Add(tempData);
             gameObj = spoon;
             currentkey = CURRENT_KEY.F1;
             fileName = init_time + "_spoon" + game1_count.ToString() + "_level" + MovingDishes.whichlevel;
@@ -182,33 +183,13 @@ public class CSVManager : MonoBehaviour
         //F2:: 두번째 게임 시작
         else if (Input.GetKeyDown(KeyCode.F2) && currentkey != CURRENT_KEY.F2 && currentkey != CURRENT_KEY.F1)
         {
-            //if (!IsInit)
-            //{
-            //    outStream.Write(sb);
-            //    outStream.Close();
-            //    watch.Stop();
-            //    UnityEngine.Debug.Log("The game ends");
-            //    UnityEngine.Debug.Log("CSV Saved completely on: " + filepath + fileName + ".csv");
-            //}
-
-            //레벨별로 그림 바꾸기
-            key2 = CanvasObj.GetComponent<ChangingCanvas>().currentkey;
-            if (key2 == ChangingCanvas.CURRENT_KEY2.n8)
+            if (!IsInit)
             {
-                figure_name = "Figure1";
-            }
-            else if (key2 == ChangingCanvas.CURRENT_KEY2.n9)
-            {
-                figure_name = "Figure2";
-            }
-            else if (key2 == ChangingCanvas.CURRENT_KEY2.n0)
-            {
-                figure_name = "Figure3";
-            }
-            else if (key2 == ChangingCanvas.CURRENT_KEY2.None)
-            {
-                UnityEngine.Debug.Log("레벨을 정해주세요");
-                return;
+                outStream.Write(sb);
+                outStream.Close();
+                watch.Stop();
+                UnityEngine.Debug.Log("The game ends");
+                UnityEngine.Debug.Log("CSV Saved completely on: " + filepath + fileName + ".csv");
             }
 
             watch = new Stopwatch();
@@ -250,14 +231,33 @@ public class CSVManager : MonoBehaviour
             game2Text.color = new Color32(0xFF, 0x5C, 0x25, 0xFF);
             //점수표 색깔 원래대로(보라) 바꾸기
             game1ScoreText.color = new Color32(0x67, 0x00, 0xFF, 0xFF);
-
+            //그림 바꾸기
+            key2 = CanvasObj.GetComponent<ChangingCanvas>().currentkey;
+            UnityEngine.Debug.Log("찾았습니다.");
+            if (key2 == ChangingCanvas.CURRENT_KEY2.n8)
+            {
+                figure_name = "Figure1";
+            }
+            else if (key2 == ChangingCanvas.CURRENT_KEY2.n9)
+            {
+                figure_name = "Figure2";
+            }
+            else if (key2 == ChangingCanvas.CURRENT_KEY2.n0)
+            {
+                figure_name = "Figure3";
+            }
+            else if (key2 == ChangingCanvas.CURRENT_KEY2.None)
+            {
+                UnityEngine.Debug.Log("Level is not Set");
+                return;
+            }
 
             if (key2 != ChangingCanvas.CURRENT_KEY2.None)
             {
                 Texture tex = Resources.Load(figure_name, typeof(Texture)) as Texture;
                 Renderer renderer = CanvasObj.GetComponent<Renderer>();
                 renderer.material.SetTexture("_Image", tex);
-                UnityEngine.Debug.Log(figure_name + "으로 설정합니다.");
+                UnityEngine.Debug.Log(figure_name + "으로 바꿉니다.");
             }
 
 
@@ -276,79 +276,66 @@ public class CSVManager : MonoBehaviour
         //F3:: 게임 끝내기
         else if (Input.GetKeyDown(KeyCode.F3))
         {
+            
             if (currentkey != CURRENT_KEY.F3)
             {
                 if (!IsInit)
                 {
-                    //outStream.Write(sb);
-                    //outStream.Close();
-                    //watch.Stop();
-                    //UnityEngine.Debug.Log("The game ends");
-                    //UnityEngine.Debug.Log("CSV Saved completely on: " + filepath + fileName + ".csv");
+                    outStream.Write(sb);
+                    outStream.Close();
+                    watch.Stop();
+                    UnityEngine.Debug.Log("The game ends");
+                    UnityEngine.Debug.Log("CSV Saved completely on: " + filepath + fileName + ".csv");
                     //제목 색깔 원래대로 바꾸기
                     game1Text.color = new Color32(0xD4, 0xFF, 0x00, 0xFF);
                     game2Text.color = new Color32(0xD4, 0xFF, 0x00, 0xFF);
                     //점수표 색깔 원래대로(보라) 바꾸기
                     game1ScoreText.color = new Color32(0x67, 0x00, 0xFF, 0xFF);
-
                     //두번째 겜에서만 사진 png로 저장하기!!!!
                     if (currentkey == CURRENT_KEY.F2)
                     {
                         SaveRenderTextureToFile();
                     }
-                    
-                }
-                /*
-                 * 여기서부터는 현재 키가 F1, F2일 때 엑셀에 저장되게끔 하는 코드.
-                 * 원래는 CURRENT_KEY.none이 아니면 다 저장되게끔 했으나 F3 추가해주면서 로직 바꿈.
-                 */
-                if (currentkey == CURRENT_KEY.F1)
-                {
-                    WriteLinesToCSV();
-                    outStream.Write(sb);
-                    outStream.Close();
-                    watch.Stop();
-                    UnityEngine.Debug.Log("The game ends");
-                    UnityEngine.Debug.Log("CSV Saved completely on: " + filepath + fileName + ".csv");
-                }
-                //두번째 게임에서는 반드시 그릴 때에만 값을 저장해준다.
-                else if (currentkey == CURRENT_KEY.F2)
-                {
-                    screenPoint = camera.WorldToViewportPoint(markertip.transform.position);
-                    onScreen = screenPoint.z > 0f && screenPoint.z < 1.05f && screenPoint.x > 0f && screenPoint.x < 1f && screenPoint.y > 0f && screenPoint.y < 1f;
-                    WriteLinesToCSV();
-                    if (onScreen)
-                    {
-                        CameraText.text = "Drawing";
-                        drawing_check = 1;
-                        CameraText.color = new Color32(0x00, 0xFF, 0x76, 0xFF);
-                    }
-                    else
-                    {
-                        CameraText.text = "Not Drawing";
-                        drawing_check = 0;
-                        CameraText.color = new Color32(0x55, 0x00, 0xFF, 0xFF);
-                    }
-                    outStream.Write(sb);
-                    outStream.Close();
-                    watch.Stop();
-                    UnityEngine.Debug.Log("The game ends");
-                    UnityEngine.Debug.Log("CSV Saved completely on: " + filepath + fileName + ".csv");
                 }
                 IsInit = true;
                 currentkey = CURRENT_KEY.F3;
                 UnityEngine.Debug.Log("Having a breaktime");
+
             }
-            //F3광클해도 무조건 Wipe out 하게끔 ㅇㅇ
             ClearOutRenderTexture(renderTexture_canvas);
+        }
+        /*
+         * 여기서부터는 현재 키가 F1, F2일 때 엑셀에 저장되게끔 하는 코드.
+         * 원래는 CURRENT_KEY.none이 아니면 다 저장되게끔 했으나 F3 추가해주면서 로직 바꿈.
+         */
+        if (currentkey == CURRENT_KEY.F1)
+            WriteLinesToCSV();
+        //두번째 게임에서는 반드시 그릴 때에만 값을 저장해준다.
+        else if (currentkey == CURRENT_KEY.F2)
+        {
+            screenPoint = camera.WorldToViewportPoint(markertip.transform.position);
+            onScreen = screenPoint.z > 0f && screenPoint.z < 1.05f && screenPoint.x > 0f && screenPoint.x < 1f && screenPoint.y > 0f && screenPoint.y < 1f;
+            WriteLinesToCSV();
+            if (onScreen)
+            {
+                CameraText.text = "Drawing";
+                drawing_check = 1;
+                CameraText.color = new Color32(0x00, 0xFF, 0x76, 0xFF);
+            }
+            else
+            {
+                CameraText.text = "Not Drawing";
+                drawing_check = 0;
+                CameraText.color = new Color32(0x55, 0x00, 0xFF, 0xFF);
+            }
         }
     }
 
     private void OnDestroy()
     {
-        //outStream.Write(sb);
+        outStream.Write(sb);
         outStream.Close();
-        //UnityEngine.Debug.Log("CSV Saved completely on: " + filepath + fileName + ".csv");
+        UnityEngine.Debug.Log("CSV Saved completely on: " + filepath + fileName + ".csv");
 
     }
 
@@ -478,9 +465,9 @@ public class CSVManager : MonoBehaviour
 
         string background_path = Application.dataPath + "/Resources/" + figure_name + ".png";
         SaveAndBlendTextures(tex, background_path);
-        
 
-        
+
+
     }
 
     private Texture2D BlendTextures(Texture2D baseTexture, Texture2D overlayTexture)
@@ -488,7 +475,7 @@ public class CSVManager : MonoBehaviour
         if (baseTexture.width != overlayTexture.width || baseTexture.height != overlayTexture.height)
         {
             UnityEngine.Debug.LogError("텍스처 크기가 일치하지 않습니다. 크기를 맞춰주세요.\n" +
-                "(" + baseTexture.width +","+ baseTexture.height + ") | (" + overlayTexture.width + "," + overlayTexture.height + ")");
+                "(" + baseTexture.width + "," + baseTexture.height + ") | (" + overlayTexture.width + "," + overlayTexture.height + ")");
             return null;
         }
 
@@ -575,5 +562,5 @@ public class CSVManager : MonoBehaviour
 
         return resizedTexture;
     }
-}
 
+}
