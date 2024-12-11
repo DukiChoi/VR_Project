@@ -11617,8 +11617,8 @@ MonoBehaviour:
   acc_y: 0
   acc_z: 0
   button: 0
-  rightHand: {fileID: 1954704226}
-  leftHand: {fileID: 2132471003}
+  rightHand: {fileID: 1580731225}
+  leftHand: {fileID: 1047044505}
 --- !u!1001 &524948539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18995,7 +18995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc5f48af2cffd747a079fe8c632e2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portName: COM12
+  portName: COM3
   baudRate: 115200
   messageListener1: {fileID: 1300859769}
   messageListener2: {fileID: 524229490}
@@ -19014,8 +19014,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae30a4e3955991c4a9a7dc85f773bef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HandToUse: 0
-  FrontDirection: 175
+  HandToUse: 1
+  FrontDirection: -70
 --- !u!1 &841128059
 GameObject:
   m_ObjectHideFlags: 0
@@ -23306,6 +23306,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 44563833}
   m_SourcePrefab: {fileID: 100100000, guid: 7d297ce6a487c0247b5edccce4ece3c6, type: 3}
+--- !u!1 &1047044505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3036878528860908081, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
+  m_PrefabInstance: {fileID: 737078550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1060371908
 GameObject:
   m_ObjectHideFlags: 0
@@ -23944,6 +23949,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2059022840}
   m_SourcePrefab: {fileID: 100100000, guid: 7d297ce6a487c0247b5edccce4ece3c6, type: 3}
+--- !u!1 &1089357343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3036878530019150799, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
+  m_PrefabInstance: {fileID: 737078550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1091397668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
@@ -27400,7 +27410,7 @@ MonoBehaviour:
   acc_z: 0
   button: 0
   rightHand: {fileID: 1954704226}
-  leftHand: {fileID: 2132471003}
+  leftHand: {fileID: 1089357343}
 --- !u!1001 &1307655359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32854,6 +32864,11 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 0.25
+--- !u!1 &1580731225 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 341548596252278237, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
+  m_PrefabInstance: {fileID: 737078550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1589786718
 GameObject:
   m_ObjectHideFlags: 0
@@ -43027,11 +43042,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a8211a3e0e87d014e8326e23ae022d39, type: 3}
   m_PrefabInstance: {fileID: 2125541156}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2132471003 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3036878528942314998, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
-  m_PrefabInstance: {fileID: 737078550}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2133729205 stripped
 GameObject:
