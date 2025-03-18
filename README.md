@@ -1,9 +1,9 @@
-# Virtual Reality System for the Precise Measurement and Evaluation of Movement Disorders
+# A Virtual Reality-Based Assessment System for Tremor Disorders Using CNN and RNN for Comprehensive Symptom Analysis 
 
 ## 0. Overview
 This project explores the use of Virtual Reality (VR) platforms combined with IMU sensors to diagnose movement disorders, specifically focusing on conditions such as Parkinson's disease and essential tremor. 
 Current diagnostic tools, such as the Unified Parkinson's Disease Rating Scale (UPDRS) and the TETRAS scale for essential tremor, rely on subjective assessments, often leading to potential biases in diagnosis.
-
+[Thesis for the Master of Science](https://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=a6318027226bf546ffe0bdc3ef48d419)
 
 ## 1. Pictures
 
