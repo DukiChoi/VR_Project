@@ -55,7 +55,7 @@ void setup()
   
   // Initialize Bluefruit with maximum connections as Peripheral = 0, Central = 1
   // SRAM usage required by SoftDevice will increase dramatically with number of connections
-  Bluefruit.begin(0, 2);
+  Bluefruit.begin(0, 1);
   
   Bluefruit.setName("Bluefruit52 Central");
 
