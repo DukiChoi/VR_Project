@@ -14,7 +14,8 @@ public class SettingController : MonoBehaviour
     public enum DIRECTION_TYPE
     {
         HOME = -70,
-        SCHOOL = 175
+        SCHOOL = 175,
+        SCHOOL_DESK = -66
     }
 
     [Header("<<Please Select Which Hand To Use>>")]
