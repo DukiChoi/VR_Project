@@ -18995,7 +18995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc5f48af2cffd747a079fe8c632e2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portName: COM3
+  portName: COM12
   baudRate: 115200
   messageListener1: {fileID: 1300859769}
   messageListener2: {fileID: 524229490}
@@ -19014,8 +19014,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae30a4e3955991c4a9a7dc85f773bef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HandToUse: 1
-  FrontDirection: -70
+  HandToUse: 0
+  FrontDirection: -66
 --- !u!1 &841128059
 GameObject:
   m_ObjectHideFlags: 0

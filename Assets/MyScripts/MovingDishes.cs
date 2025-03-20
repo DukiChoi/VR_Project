@@ -34,6 +34,7 @@ public class MovingDishes : MonoBehaviour
         dish = GameObject.Find("RedBowl");
         balls = GameObject.FindGameObjectsWithTag("Tomato");
         pos_default = dish.transform.position;
+
         //이렇게 한번도 안써본 array에는 new로 그냥 임의로 초기화를 해놔야 참조 오류가 안난다.
         pos_default_balls = new Vector3[balls.Length];
         Debug.Log("Length is: " + balls.Length);
