@@ -48,7 +48,7 @@ public class CSVManager : MonoBehaviour
     public RenderTexture renderTexture1;
     private Stopwatch watch;
     private int drawing_check = 0;
-    private String figure_name = "";
+    private String figure_name = "Figure1";
     ChangingCanvas.CURRENT_KEY2 key2;
     private GameObject CanvasObj;
     private RenderTexture renderTexture_canvas; // 저장할 RenderTexture를 Unity 에디터에서 설정
