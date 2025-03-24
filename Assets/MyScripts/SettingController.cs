@@ -13,7 +13,7 @@ public class SettingController : MonoBehaviour
 
     public enum DIRECTION_TYPE
     {
-        HOME = -70,
+        HOME = -162,
         SCHOOL = 175,
         SCHOOL_DESK = -66
     }
