@@ -47,7 +47,6 @@ Additionally, we are currently conducting research to analyze the data using AI-
 
 ### 5. Data Analysis Examples
 
-###### Table
 <img src="https://github.com/user-attachments/assets/70e40289-20d0-4806-a627-4c692e02c17a"  width="500" height="250"/>
 
 <img src="https://github.com/user-attachments/assets/f49e6ea5-8de1-4461-b9a2-a3331852ee4a"  width="600" height="400"/>
