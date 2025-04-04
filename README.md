@@ -29,7 +29,8 @@ https://github.com/user-attachments/assets/743ca44c-4326-4589-9b2b-2f57e76d7bc5
 
 ## 4. Breif Explanation
 
- ![그림2](https://github.com/user-attachments/assets/b3b7e8fe-f19a-4fbe-ac0e-a6439e69ce64)
+![Task Design](https://github.com/user-attachments/assets/e18f91a1-ca39-4b19-bb52-ee962f147ad4)
+
 In the VR environment implemented with a Head Mounted Display (HMD), participants used devices equipped with IMU sensors and the nRF52840 microcontroller to simulate daily activities. Each of the two tasks was divided into five levels of difficulty. For the first task, transferring food from one bowl to another, the difficulty was increased by extending the distance between the bowls. In the second task, drawing a spiral pattern on a blackboard, the difficulty was adjusted by increasing the size of the spiral.
 
 While the participants performed these tasks, 3-axis acceleration and orientation data detected by the IMU sensors, along with the position of the tool in virtual reality, were recorded. The collected data was then used for statistical analysis based on Fitts' law, with the difficulty level for each task considered in the analysis.
@@ -38,8 +39,10 @@ Additionally, we are currently conducting research to analyze the data using AI-
 
 ### 5. Analysis Example
 
-![Graph1](https://github.com/user-attachments/assets/6136bcea-f0a0-4e9c-add3-a1bc84aa65eb)
-![Graph2](https://github.com/user-attachments/assets/9125ad2f-10c6-4a30-adc2-c05c4b912036)
+![image](https://github.com/user-attachments/assets/70e40289-20d0-4806-a627-4c692e02c17a)
+![image](https://github.com/user-attachments/assets/f49e6ea5-8de1-4461-b9a2-a3331852ee4a)
+![image](https://github.com/user-attachments/assets/9540dc7f-ca2c-4712-95a5-38e2cdf23fad)
+
 
 
 
