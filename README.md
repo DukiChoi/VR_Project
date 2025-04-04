@@ -32,13 +32,13 @@ Current diagnostic tools, such as the Unified Parkinson's Disease Rating Scale (
 
 ## 3. GIFs
 
-
 ![드로잉 외부화면](https://github.com/user-attachments/assets/d3f06cf1-34f2-4895-b02a-524e93016199)
-![숟가락 외부화면3](https://github.com/user-attachments/assets/c1faf098-1795-4022-8661-51ab8086b05f)
+![숟가락 외부화면](https://github.com/user-attachments/assets/c1faf098-1795-4022-8661-51ab8086b05f)
 
 ## 4. Breif Explanation
 
-![Task Design](https://github.com/user-attachments/assets/e18f91a1-ca39-4b19-bb52-ee962f147ad4)
+######Task Design
+<img src="https://github.com/user-attachments/assets/e18f91a1-ca39-4b19-bb52-ee962f147ad4"  width="500" height="600"/>
 
 In the VR environment implemented with a Head Mounted Display (HMD), participants used devices equipped with IMU sensors and the nRF52840 microcontroller to simulate daily activities. Each of the two tasks was divided into five levels of difficulty. For the first task, transferring food from one bowl to another, the difficulty was increased by extending the distance between the bowls. In the second task, drawing a spiral pattern on a blackboard, the difficulty was adjusted by increasing the size of the spiral.
 
@@ -46,14 +46,14 @@ While the participants performed these tasks, 3-axis acceleration and orientatio
 
 Additionally, we are currently conducting research to analyze the data using AI-based analysis techniques (e.g., CNN, RNN), beyond simple statistical analysis.
 
-### 5. Data Analysis Example
+### 5. Data Analysis Examples
 
-![표](https://github.com/user-attachments/assets/70e40289-20d0-4806-a627-4c692e02c17a)
-![CNN](https://github.com/user-attachments/assets/f49e6ea5-8de1-4461-b9a2-a3331852ee4a)
-![RNN](https://github.com/user-attachments/assets/9540dc7f-ca2c-4712-95a5-38e2cdf23fad)
-
-
-
+######Table
+<img src="https://github.com/user-attachments/assets/70e40289-20d0-4806-a627-4c692e02c17a"  width="500" height="250"/>
+######CNN
+<img src="https://github.com/user-attachments/assets/f49e6ea5-8de1-4461-b9a2-a3331852ee4a"  width="400" height="200"/>
+######RNN
+<img src="https://github.com/user-attachments/assets/9540dc7f-ca2c-4712-95a5-38e2cdf23fad"  width="400" height="200"/>
 
 ## License Information
 
