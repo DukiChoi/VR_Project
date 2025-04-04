@@ -14,13 +14,13 @@ Current diagnostic tools, such as the Unified Parkinson's Disease Rating Scale (
 
 ### 2. Custom-designed Board and Modeling
 
-![Custom-designed Board](https://github.com/user-attachments/assets/2d9a14d4-bffe-410f-ab8f-fb90dc72cccf)
-![image](https://github.com/user-attachments/assets/f30fbfd0-fa15-4a32-ab15-6bb347987dab)
-![image](https://github.com/user-attachments/assets/8cd3c28d-abbb-4962-8cdd-d0971f97c1ae)
-
-![Spoon](https://github.com/user-attachments/assets/c1b4d9aa-9c8f-45c1-8631-5044df10b772)
+![PCB](https://github.com/user-attachments/assets/2d9a14d4-bffe-410f-ab8f-fb90dc72cccf)
+![PCB모델링](https://github.com/user-attachments/assets/f30fbfd0-fa15-4a32-ab15-6bb347987dab)
 ![Spooon](https://github.com/user-attachments/assets/ed2d272f-3ab6-48ab-9f5c-c56f41bcef15)
 ![Marker](https://github.com/user-attachments/assets/13a00e2b-0f96-4cdf-be1e-5a24fe4b593e)
+![컨트롤러전체](https://github.com/user-attachments/assets/a937555f-ae0d-4b20-a329-fa59d28b7fe3)
+
+
 
 ## 3. Videos
 
