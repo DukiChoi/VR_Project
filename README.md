@@ -15,6 +15,7 @@ Current diagnostic tools, such as the Unified Parkinson's Disease Rating Scale (
 ### 2. Custom-designed Board and Modeling
 
 ![Custom-designed Board](https://github.com/user-attachments/assets/2d9a14d4-bffe-410f-ab8f-fb90dc72cccf)
+![image](https://github.com/user-attachments/assets/f30fbfd0-fa15-4a32-ab15-6bb347987dab)
 ![image](https://github.com/user-attachments/assets/8cd3c28d-abbb-4962-8cdd-d0971f97c1ae)
 
 ![Spoon](https://github.com/user-attachments/assets/c1b4d9aa-9c8f-45c1-8631-5044df10b772)
