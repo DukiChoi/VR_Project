@@ -50,8 +50,10 @@ Additionally, we are currently conducting research to analyze the data using AI-
 
 ###### Table
 <img src="https://github.com/user-attachments/assets/70e40289-20d0-4806-a627-4c692e02c17a"  width="500" height="250"/>
+
 ###### CNN
 <img src="https://github.com/user-attachments/assets/f49e6ea5-8de1-4461-b9a2-a3331852ee4a"  width="400" height="200"/>
+
 ###### RNN
 <img src="https://github.com/user-attachments/assets/9540dc7f-ca2c-4712-95a5-38e2cdf23fad"  width="400" height="200"/>
 
