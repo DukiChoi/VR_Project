@@ -24,8 +24,8 @@ Current diagnostic tools, such as the Unified Parkinson's Disease Rating Scale (
 
 ## 3. Videos
 
-https://github.com/user-attachments/assets/d83c568d-5c40-49ca-bca4-efd353bf4da3
-https://github.com/user-attachments/assets/743ca44c-4326-4589-9b2b-2f57e76d7bc5
+
+![드로잉 외부화면](https://github.com/user-attachments/assets/d3f06cf1-34f2-4895-b02a-524e93016199)
 
 ## 4. Breif Explanation
 
