@@ -9,9 +9,8 @@ Current diagnostic tools, such as the Unified Parkinson's Disease Rating Scale (
 
 ### Tasks(Spooning And Drawing)
 
-###### Spooning
+###### Two Tasks - Spooning(Transfering Tomatos) and Drawing a spiral.
 <img src="https://github.com/user-attachments/assets/069d922c-08e6-4958-b31a-45bf1e6ef64f"  width="400" height="400"/>
-###### Drawing
 <img src="https://github.com/user-attachments/assets/b0209c91-db1a-4afa-8281-6a8d4bedd9d6"  width="400" height="400"/>
 
 
