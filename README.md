@@ -24,13 +24,9 @@ Current diagnostic tools, such as the Unified Parkinson's Disease Rating Scale (
 ###### PCB Modeling
 <img src="https://github.com/user-attachments/assets/f30fbfd0-fa15-4a32-ab15-6bb347987dab"  width="800" height="400"/>
 
-###### Spoon Controller
-<img src="https://github.com/user-attachments/assets/ed2d272f-3ab6-48ab-9f5c-c56f41bcef15"  width="400" height="200"/>
-
-###### Marker Controller
-<img src="https://github.com/user-attachments/assets/13a00e2b-0f96-4cdf-be1e-5a24fe4b593e"  width="400" height="200"/>
-
 ###### Controllers
+<img src="https://github.com/user-attachments/assets/ed2d272f-3ab6-48ab-9f5c-c56f41bcef15"  width="400" height="200"/>
+<img src="https://github.com/user-attachments/assets/13a00e2b-0f96-4cdf-be1e-5a24fe4b593e"  width="400" height="200"/>
 <img src="https://github.com/user-attachments/assets/a937555f-ae0d-4b20-a329-fa59d28b7fe3"  width="400" height="200"/>
 
 
