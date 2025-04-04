@@ -26,6 +26,7 @@ Current diagnostic tools, such as the Unified Parkinson's Disease Rating Scale (
 
 
 ![드로잉 외부화면](https://github.com/user-attachments/assets/d3f06cf1-34f2-4895-b02a-524e93016199)
+![숟가락 외부화면3](https://github.com/user-attachments/assets/c1faf098-1795-4022-8661-51ab8086b05f)
 
 ## 4. Breif Explanation
 
@@ -37,11 +38,11 @@ While the participants performed these tasks, 3-axis acceleration and orientatio
 
 Additionally, we are currently conducting research to analyze the data using AI-based analysis techniques (e.g., CNN, RNN), beyond simple statistical analysis.
 
-### 5. Analysis Example
+### 5. Data Analysis Example
 
-![image](https://github.com/user-attachments/assets/70e40289-20d0-4806-a627-4c692e02c17a)
-![image](https://github.com/user-attachments/assets/f49e6ea5-8de1-4461-b9a2-a3331852ee4a)
-![image](https://github.com/user-attachments/assets/9540dc7f-ca2c-4712-95a5-38e2cdf23fad)
+![표](https://github.com/user-attachments/assets/70e40289-20d0-4806-a627-4c692e02c17a)
+![CNN](https://github.com/user-attachments/assets/f49e6ea5-8de1-4461-b9a2-a3331852ee4a)
+![RNN](https://github.com/user-attachments/assets/9540dc7f-ca2c-4712-95a5-38e2cdf23fad)
 
 
 
