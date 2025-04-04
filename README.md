@@ -31,7 +31,7 @@ Current diagnostic tools, such as the Unified Parkinson's Disease Rating Scale (
 <img src="https://github.com/user-attachments/assets/13a00e2b-0f96-4cdf-be1e-5a24fe4b593e"  width="400" height="200"/>
 
 ###### Controllers
-<img src="https://github.com/user-attachments/assets/a937555f-ae0d-4b20-a329-fa59d28b7fe3"  width="800" height="400"/>
+<img src="https://github.com/user-attachments/assets/a937555f-ae0d-4b20-a329-fa59d28b7fe3"  width="400" height="200"/>
 
 
 ## 3. GIFs
