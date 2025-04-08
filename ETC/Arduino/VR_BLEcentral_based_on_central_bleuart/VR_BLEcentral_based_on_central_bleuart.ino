@@ -42,9 +42,12 @@ unsigned long preTime;
 int battery_level = 0;
 unsigned long time_before = 0;
 //버튼 핀
-int button_pin1 = 15;
-int button_pin2 = 16;
-
+int button_pin1 = 16;
+int button_pin2 = 15;
+uint8_t switchValue1 = 0;
+uint8_t switchValue2 = 0;
+uint8_t switch_bit = 0;
+uint8_t switch_bit_before = 0;
 void setup()
 {
   Serial.begin(115200);
@@ -228,7 +231,13 @@ void bleuart_rx_callback(BLEClientUart& uart_svc)
 
   //데이터 배열 초기화
   byte data[data_size] = {0};
-
+  /////////////////////////
+  switchValue1 = digitalRead(button_pin1);
+  switchValue2 = digitalRead(button_pin2);
+  switch_bit_before = switch_bit;
+  switch_bit = (switchValue2 << 1) | switchValue1;
+  /////////////////////////
+  
   int count = 0;
   while ( uart_svc.available() )
   {
@@ -237,7 +246,6 @@ void bleuart_rx_callback(BLEClientUart& uart_svc)
   }
   decompressData(data, An, &switchValue, a);
 
-  
   // Serial.print("\t Count: ");
   // Serial.print(count);
   // Serial.print("\t Size: ");
@@ -285,7 +293,7 @@ void decompressData(byte* data, float An[3], uint8_t* switchValue, float a[3]) {
           // Serial.print(" ");
           // Serial.print(decompressed);
       }
-      *switchValue = (uint8_t)data[index++]; // readValue 복원
+      *switchValue = !(uint8_t)data[index++]; // readValue 복원
       // Serial.print(" ");
       // Serial.print(switchValue);
       for (int i = 0; i < 3; i++) {
@@ -299,8 +307,8 @@ void decompressData(byte* data, float An[3], uint8_t* switchValue, float a[3]) {
       // Serial.print(" Size: ");
       // Serial.print(sizeof(data));
       // Serial.print(" ");
-      snprintf(buffer, sizeof(buffer), "%.1f,%.1f,%.1f,%d,%.2f,%.2f,%.2f",
-      An[0], An[1], An[2], *switchValue, a[0], a[1], a[2]);
+      snprintf(buffer, sizeof(buffer), "%d,%.1f,%.1f,%.1f,%d,%.2f,%.2f,%.2f",
+      switch_bit, An[0], An[1], An[2], *switchValue, a[0], a[1], a[2]);
       
     }
     Serial.println(buffer);

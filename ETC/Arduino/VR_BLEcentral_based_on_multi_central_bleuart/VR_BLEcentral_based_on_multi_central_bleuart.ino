@@ -63,7 +63,7 @@ SoftwareTimer blinkTimer;
 uint8_t connection_num = 0;  // for blink pattern
 int count = 0;
 const int data_size = 20;
-
+bool go_connect = true;
 
 void setup()
 {
@@ -116,7 +116,7 @@ void setup()
   Bluefruit.Scanner.setRxCallback(scan_callback);
   Bluefruit.Scanner.restartOnDisconnect(true);
   Bluefruit.Scanner.setInterval(160, 80); // in unit of 0.625 ms
-  Bluefruit.Scanner.filterUuid(BLEUART_UUID_SERVICE);
+  // Bluefruit.Scanner.filterUuid(BLEUART_UUID_SERVICE);
   Bluefruit.Scanner.useActiveScan(false);
   Bluefruit.Scanner.start(0);                   // // 0 = Don't stop scanning after n seconds
 
@@ -157,18 +157,20 @@ void connect_callback(uint16_t conn_handle){
 
   Serial.print("Connected to ");
   Serial.println(peer->name);
-  // if(strcmp(peer->name,"Spoon") == 0){
-  //   conn_handle1 = conn_handle;
-  //   Serial.print("Name saved: "); Serial.print("Spoon "); Serial.print("conn_handle: "); Serial.println(conn_handle);
-  // }else if(strcmp(peer->name,"Marker") == 0){
-  //   conn_handle2 = conn_handle;
-  //   Serial.print("Name saved: "); Serial.print("Marker "); Serial.print("conn_handle: "); Serial.println(conn_handle);
-  // }else{
-  //   Serial.println("No name saved");
-  // }
+  if(strcmp(peer->name,"Spoon") == 0){
+    // conn_handle1 = conn_handle;
+    // Serial.print("Name saved: "); Serial.print("Spoon "); Serial.print("conn_handle: "); Serial.println(conn_handle);
+    go_connect = true;
+  }else if(strcmp(peer->name,"Marker") == 0){
+    // conn_handle2 = conn_handle;
+    // Serial.print("Name saved: "); Serial.print("Marker "); Serial.print("conn_handle: "); Serial.println(conn_handle);
+    go_connect = true;
+  }else{
+    go_connect = false;
+  }
   Serial.print("Discovering BLE UART service ... ");
 
-  if (peer->bleuart.discover(conn_handle)) {
+  if (peer->bleuart.discover(conn_handle) && go_connect == true) {
     Serial.println("Found it");
     Serial.println("Enabling TXD characteristic's CCCD notify bit");
     peer->bleuart.enableTXD();
@@ -361,7 +363,7 @@ void decompressData(byte* data, float An[3], uint8_t* switchValue, float a[3], u
     char buffer[128];
 
     if(data[0] == 0){
-      Fetch_batterylevel(millis(), switch_bit, peer);
+      // Fetch_batterylevel(millis(), switch_bit, peer);
       initial_value = data[0];
       sys = data[1];
       gyro = data[2];

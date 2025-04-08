@@ -1,17 +1,3 @@
-/*********************************************************************
- This is an example for our nRF52 based Bluefruit LE modules
-
- Pick one up today in the adafruit shop!
-
- Adafruit invests time and resources providing this open source code,
- please support Adafruit and open-source hardware by purchasing
- products from Adafruit!
-
- MIT license, check LICENSE for more information
- All text above, and the splash screen below must be included in
- any redistribution
-*********************************************************************/
-
 #include <Wire.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BNO055.h>
@@ -563,9 +549,9 @@ void disconnect_callback(uint16_t conn_handle, uint8_t reason)
   Serial.print("Disconnected, reason = 0x"); Serial.println(reason, HEX);
   Serial.println("Re - Advertising"); Serial.println();
   //연결끊고 다시연결(알고보니 다시 연결은 스스로하더라ㅎ)
-  // Bluefruit.disconnect(conn_handle_before);
+  Bluefruit.disconnect(conn_handle_before);
   
-  startAdv();
+  // startAdv();
 }
 
 // byte 배열 합하려고 만든 건데 안씀 
@@ -590,7 +576,6 @@ char * encoding(char *text_input, char *source, char *target)
     int output_len = input_len*2;
 
     size_t in_size = input_len;
-
     size_t out_size = output_len;
 
     char *output = (char *)malloc(output_len);
@@ -620,4 +605,3 @@ void string2ByteArray(char* input, byte* output)
         output[i++] = input[loop++];
     }
 }
-
